@@ -1,0 +1,164 @@
+<app-header></app-header>
+<!-- ------------------------------------------------------------------------------------- -->
+
+<!-- <section
+  id="home"
+  class="min-h-screen bg-no-repeat bg-cover"
+  style="background-image: url('./assets/images/smile.jpg');"
+>
+  <div id="motto" class="flex flex-col justify-center w-1/2 pl-20 text-5xl text-white h-80">
+    <h3 class="text-blue-500">Your Perfect Smile Starts Here</h3>
+    <p class="text-base">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+    </p>
+    <div id="buttons" class="mt-8">
+      <button
+        class="px-8 py-4 text-lg font-semibold text-gray-900 transition-colors duration-300 border-2 border-blue-500 rounded-lg hover:bg-blue-500 hover:text-white"
+      >
+        Book Appointment
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="aboutus" class="bg-white bg-no-repeat bg-cover" style="background-image: url(./assets/images/dental.jpg);">
+  <div class="py-16 about">
+    <h1 class="mb-6 text-5xl text-center text-blue-600">About Us</h1>
+    <p class="max-w-xl px-4 mx-auto text-lg text-gray-800">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis
+      cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh
+      et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+    </p>
+    <div class="flex justify-center mt-10">
+      <a
+        href="#"
+        class="px-8 py-4 text-lg font-semibold text-gray-900 transition-colors duration-300 border-2 border-blue-500 rounded-lg hover:bg-blue-500 hover:text-white"
+        >Learn More</a
+      >
+    </div>
+  </div>
+</section>
+<section id="services" class="py-16 bg-gray-100">
+  <h1 class="mb-10 text-4xl text-center text-gray-800">Our Services</h1>
+  <div class="container grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3">
+    <div class="p-6 bg-white rounded-lg shadow-md service">
+      <i class="mb-4 text-3xl text-blue-500 fas fa-tooth"></i>
+      <h2 class="mb-2 text-xl font-semibold text-gray-800">Teeth Whitening</h2>
+      <p class="text-gray-600">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+      </p>
+    </div>
+    <div class="p-6 bg-white rounded-lg shadow-md service">
+      <i class="mb-4 text-3xl text-blue-500 fas fa-toothbrush"></i>
+      <h2 class="mb-2 text-xl font-semibold text-gray-800">Dental Implants</h2>
+      <p class="text-gray-600">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+      </p>
+    </div>
+    <div class="p-6 bg-white rounded-lg shadow-md service">
+      <i class="mb-4 text-3xl text-blue-500 fas fa-smile"></i>
+      <h2 class="mb-2 text-xl font-semibold text-gray-800">Cosmetic Dentistry</h2>
+      <p class="text-gray-600">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+      </p>
+    </div>
+  </div>
+</section>
+<section id="contact" class="py-16 bg-white">
+  <h1 class="mb-10 text-4xl text-center text-gray-800">Contact Us</h1>
+  <div class="container max-w-md mx-auto">
+    <form class="grid grid-cols-1 gap-6">
+      <input
+        type="text"
+        placeholder="Name"
+        class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+      />
+      <textarea
+        placeholder="Message"
+        class="px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+      ></textarea>
+      <button
+        type="submit"
+        class="px-8 py-3 text-lg font-semibold text-white text-blue-900 transition-colors duration-300 bg-blue-500 rounded-lg hover:bg-blue-700"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section> -->
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- <img-comparison-slider>
+  <img
+    slot="first"
+    src="https://demo.curlythemes.com/dentist-wp/wp-content/uploads/sites/22/2017/06/before-1-1024x355-1024x355.jpg"
+  />
+  <img
+    slot="second"
+    src="https://demo.curlythemes.com/dentist-wp/wp-content/uploads/sites/22/2017/06/after-1-1024x355-1024x355.jpg"
+  />
+</img-comparison-slider> -->
+<!-- ------------------------------------------------------------------------------------- -->
+
+<!-- <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1254.4501034367458!2d33.83876134956821!3d27.21536004924772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1452870045387149%3A0x93925452d6ceba88!2sDr.%20Ezzy%20Dental%20Center!5e0!3m2!1sen!2seg!4v1683384859334!5m2!1sen!2seg"
+  width="600"
+  height="450"
+  style="border: 0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe> -->
+<!-- ------------------------------------------------------------------------------------- -->
+<div class="p-6">
+  <swiper
+    [slidesPerView]="4"
+    [spaceBetween]="50"
+    (swiper)="onSwiper($event)"
+    (slideChange)="onSlideChange()"
+    [navigation]="true"
+    [pagination]="{ clickable: true }"
+    [scrollbar]="{ draggable: true }"
+  >
+    <ng-template swiperSlide>
+      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+          <img class="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+        </a>
+        <div class="p-5">
+          <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Noteworthy technology acquisitions 2021
+            </h5>
+          </a>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Read more
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+</div>
