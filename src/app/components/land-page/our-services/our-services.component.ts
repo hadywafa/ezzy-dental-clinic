@@ -3,6 +3,7 @@ import { Component, HostListener } from "@angular/core";
 import { DENTAL_SERVICES } from "src/app/Core/CachedData/OurServicesData";
 import { SwiperOptions } from "swiper";
 import { TailwindBreakpoints } from "src/app/Core/enums/TailwindBreakpoints";
+import { Translations } from "src/app/Core/Services/translationService/Translations.service";
 @Component({
   selector: "app-our-services",
   templateUrl: "./our-services.component.html",
@@ -23,6 +24,10 @@ export class OurServicesComponent {
     this.updateSwiperConfig();
   }
 
+  /**
+   *
+   */
+  constructor(public appDictionary: Translations) {}
   private updateSwiperConfig() {
     const windowWidth = window.innerWidth;
     const { sm, md, lg } = TailwindBreakpoints;

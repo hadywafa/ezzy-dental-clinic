@@ -4,9 +4,19 @@ export default {
     gr: "Germany",
     rs: "Russian",
   },
-  nav: {
-    search: "Rechercher:",
-    darkMode: "Mode sombre:",
-    lightMode: "Mode lumière:",
+  header: {
+    home: "Heim",
+    aboutUs: "Über uns",
+    ourServices: "Unsere Dienstleistungen",
+    workExamples: "Arbeitsbeispiele",
+    medicalTourism: "Medizintourismus",
+    insurance: "Versicherung",
+    appointment: "Termin",
+  },
+  global: {
+    more: "Mehr",
+    ourServices: "Unsere Dienstleistungen",
+    insurance: "Versicherung",
+    medicalTourism: "Medizintourismus",
   },
 } as typeof import("./en").default;

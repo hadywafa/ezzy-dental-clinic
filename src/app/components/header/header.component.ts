@@ -33,8 +33,9 @@ export class HeaderComponent {
     this.activeElement = "";
   }
   selectLanguage(lang: string) {
-    const currentPage = this.router.url.replace("en/", "#").replace("fr/", "#").replace("sp/", "#").split("#")[1];
-    const newUrl = `/${lang}/${currentPage}`;
+    const currentPage = this.router.url.replace("en/", "#").replace("gr/", "#").replace("rs/", "#").split("#")[1];
+    let newUrl = `/${lang}`;
+    if (currentPage) newUrl = `/${lang}/${currentPage}`;
     this.router
       .navigateByUrl(newUrl)
       .then(() => location.reload())
