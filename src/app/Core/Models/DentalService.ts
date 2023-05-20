@@ -8,10 +8,7 @@ export class Paragraph {
   text!: string;
   style?: ParagraphStyle;
   subParagraphs?: Paragraph[];
-  textSize?: string;
-  textFont?: string;
-  textColor?: string;
-  marginLeft?: string;
+  tailwindClasses?: string;
 }
 
 export enum ParagraphStyle {

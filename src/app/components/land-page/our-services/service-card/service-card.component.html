@@ -2,13 +2,11 @@
   <i class="{{dentalService.cssClasses}} text-[#2E927A] text-6xl"></i>
   <h3 class="text-[#2E927A] text-lg font-bold mb-2 truncate">{{dentalService.title}}</h3>
   <p class="text-sm text-gray-600 overflow-hidden overflow-ellipsis">
-    {{dentalService.description}}
+    {{dentalService.description.at(0)?.text}}
   </p>
-  <a
-    class="bg-[#2E927A] rounded-lg hover:bg-[#c0d973] text-white p-2 px-4"
-    routerLink="/our-services/{{dentalService.id}}"
-  >
-    MORE
-  </a>
+  <div class="cursor-pointer bg-[#2E927A] rounded-lg hover:bg-[#c0d973] text-white p-2 px-4">
+    <a routerLink="/our-services/{{dentalService.id}}">
+      MORE
+    </a>
+  </div>
 </div>
-<!-- fas fa-wand-magic-sparkles -->

@@ -5,48 +5,28 @@ export const DENTAL_SERVICES: DentalService[] = [
     title: "Routine Exams",
     description: [
       {
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        text:
+          "As part of your six-monthly (or annual) checkup & review we provide a thorough and comprehensive examination of your mouth.",
         style: ParagraphStyle.Default,
-        textSize: "16px",
-        textFont: "Arial, sans-serif",
-        textColor: "#333",
-        marginLeft: "0",
-      },
-      {
-        text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        style: ParagraphStyle.Heading,
-        textSize: "20px",
-        textFont: "Helvetica, sans-serif",
-        textColor: "#ff0000",
-        marginLeft: "10px",
+        tailwindClasses: "text-dark ml-0",
       },
       {
         text:
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        style: ParagraphStyle.BulletList,
-        textSize: "18px",
-        textFont: "Verdana, sans-serif",
-        textColor: "#008000",
-        marginLeft: "20px",
-        subParagraphs: [
-          { text: "Duis aute irure dolor in reprehenderit" },
-          { text: "Excepteur sint occaecat cupidatat non proident" },
-          { text: "Sunt in culpa qui officia deserunt mollit anim id est laborum" },
-        ],
+          "After discussing your medical history and your general health condition, your dentist will start with a check up of your soft tissues – the inside of the lips, the tongue, the palate, the inside of the cheeks, again checking for abnormal conditions.",
+        style: ParagraphStyle.Default,
+        tailwindClasses: "20px",
       },
       {
         text:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        style: ParagraphStyle.NumberedList,
-        textSize: "14px",
-        textFont: "Georgia, serif",
-        textColor: "#0000ff",
-        marginLeft: "30px",
-        subParagraphs: [
-          { text: "Ut enim ad minim veniam" },
-          { text: "Quis nostrud exercitation ullamco" },
-          { text: "Duis aute irure dolor in reprehenderit" },
-        ],
+          "After that a screening of your periodontal health is carried out (the state of your gums). Minor cases of gum disease may mean a recommendation to visit the hygienist for a full-mouth scale and polish and oral hygiene instruction.",
+        style: ParagraphStyle.Default,
+        tailwindClasses: "16px",
+      },
+      {
+        text:
+          "Finally, as part of our dental service, your teeth are checked for decay & fractures. Small digital x-rays may be taken to gain a better view of ‘hidden’ areas of your mouth, for example, to detect whether any decay is occurring between or inside your teeth. X-rays also help to show the supporting bone level in your jaw, to detect signs of advanced periodontal disease or infections.",
+        style: ParagraphStyle.Default,
+        tailwindClasses: "16px",
       },
     ],
     cssClasses: "fas fa-wand-magic-sparkles",
@@ -526,27 +506,18 @@ export const DENTAL_SERVICES: DentalService[] = [
       {
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         style: ParagraphStyle.Default,
-        textSize: "16px",
-        textFont: "Arial, sans-serif",
-        textColor: "#333",
-        marginLeft: "0",
+        tailwindClasses: "text[16px] text-[#333] ml-0 font-[Arial, sans-serif]",
       },
       {
         text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         style: ParagraphStyle.Heading,
-        textSize: "20px",
-        textFont: "Helvetica, sans-serif",
-        textColor: "#ff0000",
-        marginLeft: "10px",
+        tailwindClasses: "text[20px] text-[#ff0000] ml-[10px] font-[Helvetica, sans-serif]",
       },
       {
         text:
           "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         style: ParagraphStyle.BulletList,
-        textSize: "18px",
-        textFont: "Verdana, sans-serif",
-        textColor: "#008000",
-        marginLeft: "20px",
+        tailwindClasses: "text[18px] text-[#008000] ml-[20px] font-[Verdana, sans-serif]",
         subParagraphs: [
           { text: "Duis aute irure dolor in reprehenderit" },
           { text: "Excepteur sint occaecat cupidatat non proident" },
@@ -557,10 +528,7 @@ export const DENTAL_SERVICES: DentalService[] = [
         text:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         style: ParagraphStyle.NumberedList,
-        textSize: "14px",
-        textFont: "Georgia, serif",
-        textColor: "#0000ff",
-        marginLeft: "30px",
+        tailwindClasses: "text[14px] text-[#0000ff] ml-[30px] font-[Georgia, serif]",
         subParagraphs: [
           { text: "Ut enim ad minim veniam" },
           { text: "Quis nostrud exercitation ullamco" },

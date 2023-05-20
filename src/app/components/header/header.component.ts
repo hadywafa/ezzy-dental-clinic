@@ -12,16 +12,16 @@ export class HeaderComponent {
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
-
-  navigateToOurServices(): void {
-    const element = document.getElementById("our-services");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  /**
+   *
+   */
+  constructor(private router: Router) {}
+  navigateToAnchorTag(stateName: string): void {
+    this.router.navigateByUrl(stateName).then(() => {
+      const element = document.getElementById(stateName);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    });
   }
-  // isMenuOpen = false;
-  // toggleMenu() {
-  //   this.isMenuOpen = !this.isMenuOpen;
-
-  // }
 }
