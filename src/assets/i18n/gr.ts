@@ -1,8 +1,8 @@
 export default {
   language: {
     en: "English",
-    fr: "French",
-    sp: "Spanish",
+    gr: "Germany",
+    rs: "Russian",
   },
   nav: {
     search: "Rechercher:",

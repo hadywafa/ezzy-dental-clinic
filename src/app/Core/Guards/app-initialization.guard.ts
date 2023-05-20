@@ -24,7 +24,7 @@ export class AppInitializationGuard implements CanActivate {
     // state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const lang = next.paramMap.get("lang");
-    if (!lang && this.isLangValid(lang)) {
+    if (!lang || this.isLangValid(lang)) {
       // Redirect to a default language page or handle the invalid language scenario appropriately
       return this.router.createUrlTree(["/"]);
     } else {
@@ -35,6 +35,6 @@ export class AppInitializationGuard implements CanActivate {
     }
   }
   isLangValid(lang: string | null): boolean {
-    return !(lang === "en" || lang === "fr" || lang === "sp");
+    return !(lang === AppLanguages.English || lang === AppLanguages.Germany || lang === AppLanguages.Russian);
   }
 }

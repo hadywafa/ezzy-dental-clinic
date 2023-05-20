@@ -9,8 +9,8 @@
     "src/main.ts",
     "src/polyfills.ts",
     "src/assets/i18n/en.ts",
-    "src/assets/i18n/sp.ts",
-    "src/assets/i18n/fr.ts"
+    "src/assets/i18n/gr.ts",
+    "src/assets/i18n/rs.ts"
   ],
   "include": ["src/**/*.d.ts"]
 }

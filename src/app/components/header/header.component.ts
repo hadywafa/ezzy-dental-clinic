@@ -1,8 +1,7 @@
 import { GlobalsService } from "./../../shared/services/globals.service";
 import { Translations } from "./../../Core/Services/translationService/Translations.service";
 import { Component } from "@angular/core";
-import { NavigationEnd, Router } from "@angular/router";
-import { TranslateService } from "@ngx-translate/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-header",

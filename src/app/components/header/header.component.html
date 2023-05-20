@@ -26,81 +26,82 @@
       [ngClass]="{ 'block': mobileMenuOpen, 'hidden': !mobileMenuOpen }"
       id="navbar-sticky"
     >
-    <ul class="flex flex-col justify-center items-center p-4 md:p-0 mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
-      <li>
-        <a
-          [class.active]="activeElement === 'land-page'"
-          (click)="navigateToAnchorTag('land-page')"
-          class="text-white hover:text-orange-400 cursor-pointer"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          [class.active]="activeElement === 'about-us'"
-          (click)="navigateToAnchorTag('about-us')"
-          class="text-white hover:text-orange-400 cursor-pointer"
-        >
-          About Us
-        </a>
-      </li>
-      <li>
-        <a
-          [class.active]="activeElement === 'our-services'"
-          (click)="navigateToAnchorTag('our-services')"
-          class="text-white hover:text-orange-400 cursor-pointer"
-        >
-          Our Services
-        </a>
-      </li>
-      <li>
-        <a
-          (click)="resetActiveLink()"
-          routerLink="work-examples"
-          routerLinkActive="active"
-          class="text-white hover:text-orange-400 cursor-pointer"
-        >
-          work-examples
-        </a>
-      </li>
-      <li>
-        <a
-          (click)="resetActiveLink()"
-          routerLink="medical-tourism"
-          routerLinkActive="active"
-          class="text-white hover:text-orange-400 cursor-pointer"
-        >
-          medical tourism
-        </a>
-      </li>
-      <li>
-        <a
-          (click)="resetActiveLink()"
-          routerLink="insurance"
-          routerLinkActive="active"
-          class="text-white hover:text-orange-400 cursor-pointer"
-        >
-          insurance
-        </a>
-      </li>
-      <!-- new Language -->
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon class="text-white mat-18">language</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="selectLanguage('en')">
-          {{ appDictionary.language.en| translate }}
+      <ul
+        class="flex flex-col justify-center items-center p-4 md:p-0 mt-4 font-medium md:flex-row md:space-x-8 md:mt-0"
+      >
+        <li>
+          <a
+            [class.active]="activeElement === 'land-page'"
+            (click)="navigateToAnchorTag('land-page')"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            [class.active]="activeElement === 'about-us'"
+            (click)="navigateToAnchorTag('about-us')"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
+            About Us
+          </a>
+        </li>
+        <li>
+          <a
+            [class.active]="activeElement === 'our-services'"
+            (click)="navigateToAnchorTag('our-services')"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
+            Our Services
+          </a>
+        </li>
+        <li>
+          <a
+            (click)="resetActiveLink()"
+            routerLink="work-examples"
+            routerLinkActive="active"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
+            work-examples
+          </a>
+        </li>
+        <li>
+          <a
+            (click)="resetActiveLink()"
+            routerLink="medical-tourism"
+            routerLinkActive="active"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
+            medical tourism
+          </a>
+        </li>
+        <li>
+          <a
+            (click)="resetActiveLink()"
+            routerLink="insurance"
+            routerLinkActive="active"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
+            insurance
+          </a>
+        </li>
+        <!-- new Language -->
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon class="text-white mat-18">language</mat-icon>
         </button>
-        <button mat-menu-item (click)="selectLanguage('fr')">
-          {{ appDictionary.language.fr | translate }}
-        </button>
-        <button mat-menu-item (click)="selectLanguage('sp')">
-          {{ appDictionary.language.sp | translate }}
-        </button>
-      </mat-menu>
-    </ul>
-
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="selectLanguage('en')">
+            {{ appDictionary.language.en| translate }}
+          </button>
+          <button mat-menu-item (click)="selectLanguage('fr')">
+            {{ appDictionary.language.gr | translate }}
+          </button>
+          <button mat-menu-item (click)="selectLanguage('sp')">
+            {{ appDictionary.language.rs | translate }}
+          </button>
+        </mat-menu>
+      </ul>
     </div>
   </div>
 </nav>
