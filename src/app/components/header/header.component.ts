@@ -11,7 +11,7 @@ import { TranslateService } from "@ngx-translate/core";
 })
 export class HeaderComponent {
   mobileMenuOpen: boolean = false;
-  activeElement: string = ''; // Track the active element
+  activeElement: string = ""; // Track the active element
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
   }
@@ -29,6 +29,9 @@ export class HeaderComponent {
         element.scrollIntoView({ behavior: "smooth" });
       }
     });
+  }
+  resetActiveLink() {
+    this.activeElement = "";
   }
   selectLanguage(lang: string) {
     const currentPage = this.router.url.replace("en/", "#").replace("fr/", "#").replace("sp/", "#").split("#")[1];
