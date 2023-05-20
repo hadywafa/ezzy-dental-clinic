@@ -1,5 +1,5 @@
 import { DentalService, ParagraphStyle } from "src/app/Core/Models/DentalService";
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { DENTAL_SERVICES } from "src/app/Core/CachedData/OurServicesData";
 

@@ -8,18 +8,29 @@ import { RouterModule, Routes } from "@angular/router";
 import { LandPageComponent } from "./components/land-page/land-page.component";
 import { ServiceDetailsComponent } from "./components/service-details/service-details.component";
 import { AboutUsComponent } from "./components/about-us/about-us.component";
+import { AppInitializationGuard } from "./Core/Guards/app-initialization.guard";
+import { PageNotFoundComponent } from "./shared/components/page-not-found/page-not-found.component";
+import { LayoutComponent } from "./shared/components/layout/layout.component";
 
 const routes: Routes = [
-  { path: "", component: LandPageComponent },
-  { path: "home", component: LandPageComponent },
-  { path: "about-us", component: AboutUsComponent },
-  { path: "our-services/:id", component: ServiceDetailsComponent },
-  { path: "work-examples", component: WorkExamplesComponent },
-  // { path: "Guidance", component: LandPageComponent },
-  { path: "medical-tourism", component: MedicalTourismComponent },
-  { path: "insurance", component: InsuranceComponent },
-  { path: "contact-us", component: ContactUsComponent },
-  { path: "**", component: LandPageComponent },
+  {
+    path: ":lang",
+    component: LayoutComponent,
+    canActivate: [AppInitializationGuard],
+    children: [
+      { path: "", component: LandPageComponent },
+      { path: "home", component: LandPageComponent },
+      { path: "about-us", component: AboutUsComponent },
+      { path: "our-services/:id", component: ServiceDetailsComponent },
+      { path: "work-examples", component: WorkExamplesComponent },
+      { path: "medical-tourism", component: MedicalTourismComponent },
+      { path: "insurance", component: InsuranceComponent },
+      { path: "contact-us", component: ContactUsComponent },
+      // { path: "Guidance", component: LandPageComponent },
+      // { path: "**", component: PageNotFoundComponent },
+    ],
+  },
+  { path: "**", component: PageNotFoundComponent },
 ];
 
 @NgModule({

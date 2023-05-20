@@ -10,47 +10,16 @@
       <a
         type="button"
         routerLink="contact-us"
-        class="text-white bg-ezzyPrimaryFont hover:bg-orange-400 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+        class="text-white bg-ezzyPrimaryFont hover:bg-orange-400 font-medium rounded-lg text-sm p-2 text-center"
       >
         Appointment
       </a>
-      <button
+      <div
         (click)="toggleMobileMenu()"
-        type="button"
-        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-sticky"
-        aria-expanded="false"
+        class="inline-flex items-center justify-center hover:text-orange-400 p-2 text-lg text-white rounded-lg md:hidden cursor-pointer"
       >
-        <span class="sr-only">Open main menu</span>
-        <svg
-          [ngClass]="{ 'hidden': mobileMenuOpen, 'block': !mobileMenuOpen }"
-          class="w-6 h-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-        <svg
-          [ngClass]="{ 'hidden': !mobileMenuOpen, 'block': mobileMenuOpen }"
-          class="w-6 h-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M14.293 5.293a1 1 0 010 1.414L9.414 11l4.879 4.879a1 1 0 01-1.414 1.414L8 12.414l-4.879 4.879a1 1 0 01-1.414-1.414L6.586 11 1.707 6.121A1 1 0 013.121 4.707L8 9.586l4.879-4.879a1 1 0 011.414 0z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </button>
+        <i [class]="mobileMenuOpen ?  'fa fa-times'  :'fas fa-bars' "></i>
+      </div>
     </div>
     <div
       class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
@@ -59,20 +28,70 @@
     >
       <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
         <li>
-          <a routerLink="/home" routerLinkActive="active" class="text-white hover:text-orange-400">
+          <a
+            [class.active]="activeElement === 'land-page'"
+            (click)="navigateToAnchorTag('land-page')"
+            class="text-white hover:text-orange-400"
+          >
             Home
           </a>
         </li>
         <li>
-          <a (click)="navigateToAnchorTag('our-services')" class="text-white hover:text-orange-400 cursor-pointer">
+          <a
+            [class.active]="activeElement === 'our-services'"
+            (click)="navigateToAnchorTag('about-us')"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
             About Us
           </a>
         </li>
         <li>
-          <a (click)="navigateToAnchorTag('our-services')" class="text-white hover:text-orange-400 cursor-pointer">
+          <a
+            [class.active]="activeElement === 'our-services'"
+            (click)="navigateToAnchorTag('our-services')"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
             Our Services
           </a>
         </li>
+        <li>
+          <a
+            routerLink="work-examples"
+            routerLinkActive="active"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
+            work-examples
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="medical-tourism"
+            routerLinkActive="active"
+            class="text-white hover:text-orange-400 cursor-pointer"
+          >
+            medical tourism
+          </a>
+        </li>
+        <li>
+          <a routerLink="insurance" routerLinkActive="active" class="text-white hover:text-orange-400 cursor-pointer">
+            insurance
+          </a>
+        </li>
+        <!-- new Language -->
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Choose language your preferred language">
+          <mat-icon class="text-white mat-18">language</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="selectLanguage('en')">
+            {{ appDictionary.language.en| translate }}
+          </button>
+          <button mat-menu-item (click)="selectLanguage('fr')">
+            {{ appDictionary.language.fr | translate }}
+          </button>
+          <button mat-menu-item (click)="selectLanguage('sp')">
+            {{ appDictionary.language.sp | translate }}
+          </button>
+        </mat-menu>
       </ul>
     </div>
   </div>
