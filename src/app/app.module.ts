@@ -12,6 +12,10 @@ import { LandPageComponent } from "./components/land-page/land-page.component";
 import { SwiperModule } from "swiper/angular";
 import { HeaderComponent } from "./components/header/header.component";
 import { ServiceCardComponent } from "./components/land-page/our-services/service-card/service-card.component";
+import { LoaderComponent } from "./components/loader/loader.component";
+import { CommonModule } from "@angular/common";
+import { ServiceDetailsComponent } from "./components/service-details/service-details.component";
+import { NgxPageScrollModule } from "ngx-page-scroll";
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,8 +27,10 @@ import { ServiceCardComponent } from "./components/land-page/our-services/servic
     InsuranceComponent,
     ContactUsComponent,
     ServiceCardComponent,
+    ServiceDetailsComponent,
+    LoaderComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SwiperModule],
+  imports: [BrowserModule, AppRoutingModule, SwiperModule, CommonModule, NgxPageScrollModule],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

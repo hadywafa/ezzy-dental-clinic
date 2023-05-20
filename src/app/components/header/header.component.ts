@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
 
 @Component({
   selector: "app-header",
@@ -10,6 +11,13 @@ export class HeaderComponent {
 
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  navigateToOurServices(): void {
+    const element = document.getElementById("our-services");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   }
   // isMenuOpen = false;
   // toggleMenu() {

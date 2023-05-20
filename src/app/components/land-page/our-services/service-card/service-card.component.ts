@@ -1,15 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from "@angular/core";
+import { DentalService } from "src/app/Core/Models/DentalService";
 
 @Component({
-  selector: 'app-service-card',
-  templateUrl: './service-card.component.html',
-  styleUrls: ['./service-card.component.css']
+  selector: "app-service-card",
+  templateUrl: "./service-card.component.html",
+  styleUrls: ["./service-card.component.css"],
 })
-export class ServiceCardComponent implements OnInit {
-  @Input() active: boolean = false;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ServiceCardComponent {
+  @Input() dentalService!: DentalService;
 }

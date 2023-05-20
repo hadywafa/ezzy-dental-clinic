@@ -1,3 +1,47 @@
-<p>
-  service-details works!
-</p>
+<div *ngIf="dentalService;else loading" class="mx-20">
+  <h3>{{ dentalService.title }}</h3>
+  <ng-container *ngFor="let paragraph of dentalService.description">
+    <div [ngSwitch]="paragraph.style">
+      <p
+        *ngSwitchCase="ParagraphStyle.Default"
+        [style.font-size]="paragraph.textSize"
+        [style.font-family]="paragraph.textFont"
+        [style.color]="paragraph.textColor"
+        [style.margin-left]="paragraph.marginLeft"
+      >
+        {{ paragraph.text }}
+      </p>
+      <h4
+        *ngSwitchCase="ParagraphStyle.Heading"
+        [style.font-size]="paragraph.textSize"
+        [style.font-family]="paragraph.textFont"
+        [style.color]="paragraph.textColor"
+        [style.margin-left]="paragraph.marginLeft"
+      >
+        {{ paragraph.text }}
+      </h4>
+      <ul
+        *ngSwitchCase="ParagraphStyle.BulletList"
+        [style.font-size]="paragraph.textSize"
+        [style.font-family]="paragraph.textFont"
+        [style.color]="paragraph.textColor"
+        [style.margin-left]="paragraph.marginLeft"
+      >
+        <li *ngFor="let subParagraph of paragraph.subParagraphs">{{ subParagraph.text }}</li>
+      </ul>
+      <ol
+        *ngSwitchCase="ParagraphStyle.NumberedList"
+        [style.font-size]="paragraph.textSize"
+        [style.font-family]="paragraph.textFont"
+        [style.color]="paragraph.textColor"
+        [style.margin-left]="paragraph.marginLeft"
+      >
+        <li *ngFor="let subParagraph of paragraph.subParagraphs">{{ subParagraph.text }}</li>
+      </ol>
+    </div>
+  </ng-container>
+</div>
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>
