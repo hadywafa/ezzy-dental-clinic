@@ -23,6 +23,8 @@ import { from, pluck } from "rxjs";
 import { MaterialModule } from "./shared/modules/material.module";
 import { LayoutComponent } from "./shared/components/layout/layout.component";
 import { AboutUsComponent } from "./components/about-us/about-us.component";
+import { ExampleItemComponent } from "./components/work-examples/example-item/example-item.component";
+import { FooterComponent } from "./Core/footer/footer.component";
 export class WebpackTranslateLoader implements TranslateLoader {
   getTranslation(lang: string) {
     return from(import(`../assets/i18n/${lang}`)).pipe(pluck("default"));
@@ -42,6 +44,8 @@ export class WebpackTranslateLoader implements TranslateLoader {
     ServiceCardComponent,
     ServiceDetailsComponent,
     AboutUsComponent,
+    ExampleItemComponent,
+    FooterComponent,
   ],
 
   imports: [
