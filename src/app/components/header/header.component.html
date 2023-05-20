@@ -1,45 +1,78 @@
-<!-- <nav class="bg-white shadow-lg">
-  <div class="items-center justify-between px-8 py-2 md:flex md:px-12">
-    <div class="flex items-center justify-between">
-      <div class="text-2xl font-bold text-gray-800 md:text-3xl">
-        <img
-          src="https://assets.website-files.com/62bc5579271a071d88163e1f/62bd4e43c165049cce0287fe_Zaident%20Logo.png"
-        />
-      </div>
-      <div class="md:hidden" (click)="toggleMenu()">
-        <button type="button" class="block text-gray-900 hover:text-gray-500 focus:text-gray-900 focus:outline-none">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path
-              *ngIf="isMenuOpen"
-              d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z"
-            />
-            <path
-              *ngIf="!isMenuOpen"
-              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-            />
-          </svg>
-        </button>
-      </div>
+<!-- -------------------------------------------------------------------------- -->
+<nav class="bg-gradient-to-r from-[#c6dc72] to-[#35907b] shadow-lg fixed w-full z-20 top-0 left-0">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex justify-between items-center">
+      <img src="../../../assets/Dr.Ezzy_white.png" class="h-12" alt="Dr.Ezzy" />
+      <span class="text-3xl ml-4 font-semibold whitespace-nowrap text-white text-shadow">Dr.Ezzy</span>
+    </a>
+    <div class="flex md:order-2">
+      <a
+        type="button"
+        routerLink="contact-us"
+        class="text-white bg-ezzyPrimaryFont hover:bg-orange-400 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
+      >
+        Appointment
+      </a>
+      <button
+        (click)="toggleMobileMenu()"
+        type="button"
+        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          [ngClass]="{ 'hidden': mobileMenuOpen, 'block': !mobileMenuOpen }"
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <svg
+          [ngClass]="{ 'hidden': !mobileMenuOpen, 'block': mobileMenuOpen }"
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M14.293 5.293a1 1 0 010 1.414L9.414 11l4.879 4.879a1 1 0 01-1.414 1.414L8 12.414l-4.879 4.879a1 1 0 01-1.414-1.414L6.586 11 1.707 6.121A1 1 0 013.121 4.707L8 9.586l4.879-4.879a1 1 0 011.414 0z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
     </div>
-    <div class="flex-col hidden -mx-2 md:flex-row md:block">
-      <a
-        href="#"
-        class="px-2 py-2 text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium md:mx-2"
-      >
-        Home
-      </a>
-      <a
-        href="#"
-        class="px-2 py-2 text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium md:mx-2"
-      >
-        About
-      </a>
-      <a
-        href="#"
-        class="px-2 py-2 text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium md:mx-2"
-      >
-        Contact
-      </a>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      [ngClass]="{ 'block': mobileMenuOpen, 'hidden': !mobileMenuOpen }"
+      id="navbar-sticky"
+    >
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
+        <li>
+          <a routerLink="/home" routerLinkActive="active" class="text-white hover:text-orange-400">
+            Home
+          </a>
+        </li>
+        <li>
+          <a routerLink="/about-us"  class="text-white hover:text-orange-400">
+            About
+          </a>
+        </li>
+        <li>
+          <a routerLink="/our-services"  class="text-white hover:text-orange-400">
+            Our Services
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-</nav> -->
+</nav>

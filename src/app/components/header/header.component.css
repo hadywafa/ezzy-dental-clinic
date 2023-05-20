@@ -1,0 +1,6 @@
+.active {
+  @apply font-sans font-bold text-[#096568];
+}
+.link {
+  @apply font-sans font-bold text-[#096568];
+}
