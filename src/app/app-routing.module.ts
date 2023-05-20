@@ -14,6 +14,11 @@ import { LayoutComponent } from "./shared/components/layout/layout.component";
 
 const routes: Routes = [
   {
+    path: "",
+    redirectTo: "en", // Redirect to "/en" when the root path is accessed
+    pathMatch: "full",
+  },
+  {
     path: ":lang",
     component: LayoutComponent,
     canActivate: [AppInitializationGuard],

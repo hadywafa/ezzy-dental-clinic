@@ -26,7 +26,7 @@ export class AppInitializationGuard implements CanActivate {
     const lang = next.paramMap.get("lang");
     if (!lang || this.isLangValid(lang)) {
       // Redirect to a default language page or handle the invalid language scenario appropriately
-      return this.router.createUrlTree(["/"]);
+      return this.router.createUrlTree(["/", "en"]);
     } else {
       this.translateService.use(lang!);
       this.titleService.setTitle("Ezzy Dental Care");
