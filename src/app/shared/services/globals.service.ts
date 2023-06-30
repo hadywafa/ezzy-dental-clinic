@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Observable, map } from "rxjs";
+import { Observable } from "rxjs";
 import { ScreenSize } from "../modules/screen-size";
 
 @Injectable({
