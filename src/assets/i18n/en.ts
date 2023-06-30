@@ -11,7 +11,7 @@ export default {
     workExamples: "Work Examples",
     medicalTourism: "Medical Tourism",
     insurance: "Insurance",
-    appointment: "Appointment",
+    appointment: "Book an appointment",
   },
   global: {
     ourServices: "Our Services",

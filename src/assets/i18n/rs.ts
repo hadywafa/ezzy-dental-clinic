@@ -11,7 +11,7 @@ export default {
     workExamples: "Примеры работ",
     medicalTourism: "Медицинский туризм",
     insurance: "Страхование",
-    appointment: "Встреча",
+    appointment: "Записаться на прием",
   },
   global: {
     more: "Более",

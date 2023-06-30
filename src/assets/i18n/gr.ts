@@ -11,7 +11,7 @@ export default {
     workExamples: "Arbeitsbeispiele",
     medicalTourism: "Medizintourismus",
     insurance: "Versicherung",
-    appointment: "Termin",
+    appointment: "Vereinbare einen Termin",
   },
   global: {
     more: "Mehr",
